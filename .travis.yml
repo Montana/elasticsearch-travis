@@ -21,5 +21,6 @@ before_install:
   - 'sudo sed -i "s/enabled: true/enabled: false/g" /etc/elasticsearch/elasticsearch.yml'
   - sudo systemctl start elasticsearch
   - until curl --silent -XGET --fail http://localhost:9200; do printf '...\n'; sleep 2; done
+  
 install: skip
 script: true
